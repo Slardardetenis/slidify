@@ -1,0 +1,81 @@
+---
+title       : Gestão da Qualidade
+subtitle    : SME0666
+author      : Giovani
+job         : quase estatístico
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : [mathjax, quiz,bootstrap, shiny, interactive]            # {mathjax, quiz, bootstrap}
+ext_widgets: {rCharts: [libraries/nvd3]}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+---&radio
+
+
+## Question 1
+
+what is 1 + 1?
+
+1. 1
+
+2. _2_
+
+3. 3
+
+4. 4 
+
+*** .hint 
+que dica boa
+
+*** .explanation 
+É 2 pq é dois mesmo xD.
+
+---
+
+## Códigos R igual markdown
+
+```{r, echo = TRUE, results='asis'}
+sum(1:10)
+
+```
+```
+123
+```
+
+--- .clas #id
+
+## slide 3
+
+
+
+OK $x^2_i$
+
+--- 
+
+ <iframe src = 'http://dillinger.io' height='600px'></iframe>
+
+--- .middle
+
+## scatterplot 
+
+Let us create a simple scatterplot.
+
+```{r echo = F, simple-plot, fig.height = 6, fig.align = 'center', message = F}
+library(ggplot2)
+qplot(wt, mpg, data = mtcars)
+```
+
+---
+## Interactive Chart
+
+```{r echo = F, results = 'asis'}
+
+require(rCharts)
+haireye = as.data.frame(HairEyeColor)
+n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
+  data = subset(haireye, Sex == 'Male')
+)
+n1$print('chart1')
+```
