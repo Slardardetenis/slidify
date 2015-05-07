@@ -10,6 +10,10 @@ widgets     : [mathjax, quiz,bootstrap, shiny, interactive]            # {mathja
 ext_widgets: {rCharts: [libraries/nvd3]}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+logo        : slardar.png
+github      :
+  user: Slardardetenis
+  repo: slidify
 
 ---&radio
 
@@ -46,10 +50,9 @@ sum(1:10)
 123
 ```
 
---- .clas #id
+--- .class1 #id1 bg:yellow
 
 ## slide 3
-
 
 
 OK $x^2_i$
@@ -68,6 +71,11 @@ Let us create a simple scatterplot.
 
 ---
 ## Interactive Chart
+
+
+```
+## Loading required package: rCharts
+```
 
 
 <div id = 'chart1' class = 'rChart nvd3'></div>
@@ -232,3 +240,5 @@ Let us create a simple scatterplot.
       });
     };
 </script>
+
+

@@ -10,6 +10,10 @@ widgets     : [mathjax, quiz,bootstrap, shiny, interactive]            # {mathja
 ext_widgets: {rCharts: [libraries/nvd3]}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+logo        : slardar.png
+github      :
+  user: Slardardetenis
+  repo: slidify
 
 ---&radio
 
@@ -44,10 +48,9 @@ sum(1:10)
 123
 ```
 
---- .clas #id
+--- .class1 #id1 bg:yellow
 
 ## slide 3
-
 
 
 OK $x^2_i$
@@ -79,3 +82,5 @@ n1 <- nPlot(Freq ~ Hair, group = 'Eye', type = 'multiBarChart',
 )
 n1$print('chart1')
 ```
+
+
